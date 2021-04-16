@@ -1,0 +1,79 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Brush Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+
+# Dynamic Brush Model
+
+initialLambda: 1e3 # if it goes to inf during the optimization, change this parameter
+deltaOptimizer: 1 #0.5 seems to work not well
+# deg 6, inertia 0.4, may triguer something weird
+dInertiaInStroke: 0.0
+dInertiaDirection: 0 #should be a big number?
+Uunicode: "601d" #wo: 6211 luan: 4e71 si: 601d kong: 7a7a 
+# yi:4e00 shi:77f3 er: 4e8c niao: 9e1f
+optimizerType: "MULTIFRONTAL_QR" # MULTIFRONTAL_QR MULTIFRONTAL_CHOLESKY SEQUENTIAL_CHOLESKY SEQUENTIAL_QR
+NUM_SAMPLES: 50
+NUM_SAMPLES_Draw: 200
+initialDirectionThreshold: 300
+scaleForRegularizationZ: 0 # 0 to cancel the z regularization effect; 1 is good generally
+kScaleOffset: 0.5
+centerRootRatio: 0.333
+dipInk: 0 # 1 means true, 0 means false
+
+# ******************************************************************************
+# Chu Brush model 
+muExternal: 1
+kZ_Tolerance: 5
+strainOrder: 2
+weightZ: 100 # 0.5 for exponential mapping
+ZGeometricTol: -0.1
+weightStrainHorizontal: 20 #10 before
+weightStrain: 80 # used for the strain energy in StrainEnergyFactor
+kStrainLateralForOrientation: 0 # Max: PI/2
+alphaClamp: 0.05
+weightPorResistance: 0
+
+weightVerticalInnerFriction: 10
+weightStrainXY: 0 # used for the strain energy in StrainEnergyFactor
+weightTwist: 0
+weightGeometric: 30 #Very important parameter there, 10
+
+weightFrictionStrainHorizontal: 0
+
+kMax_Gradient: 1000
+
+kRatioDrag: 0.1
+mergeRatio : 0.02
+initializationStep: 200
+simulationSteps: 100
+kMinGradientTolerance: 0.0001
+
+
+
+
+tipAngle: 0.3253 # 18.64 in degree
+
+control_z: 0.8
+ORDER: 3
+baseLength: !!opencv-matrix
+            rows: 6
+            cols: 1
+            dt: d
+            data: [10, 8, 6, 2, 1, 1 ]
+
+#The first value of the sequence is always 1, and the following weights should be set relative to 1
+nodeStrainWeights: !!opencv-matrix
+            rows: 6
+            cols: 1
+            dt: d
+            data: [20, 9, 8, 5,2,1]
+
+nodeGeometricWeights: !!opencv-matrix
+            rows: 6
+            cols: 1
+            dt: d
+            data: [1,1,1,0.5,0.5,0.5]
+            
