@@ -1,5 +1,5 @@
 # Calligraphy Robot
-This is the repo for the calligraphy robot, which implements this [paper](https://arxiv.org/abs/2003.01565).
+This is the repo for the calligraphy robot, which implements this [paper](https://arxiv.org/abs/2003.01565), IROS 2020.
 
 This whole program is mostly written by C++, with a few Python code to process dataset images.
 
