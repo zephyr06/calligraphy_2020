@@ -1,5 +1,5 @@
 # Calligraphy Robot
-This is the repo for the calligraphy robot, which implements the paper [Robot calligraphy using pseudospectral optimal control in conjunction with a novel dynamic brush model](https://arxiv.org/abs/2003.01565), published at IROS 2020.
+This is the repo for the calligraphy robot, which implements the paper [Robot calligraphy using pseudospectral optimal control in conjunction with a novel dynamic brush model](https://arxiv.org/abs/2003.01565), published at IROS 2020. If you have any questions, please open an Issues or email sen.zephyr.wang@gmail.com
 
 This whole program is mostly written by C++, with a few Python code to process dataset images.
 
