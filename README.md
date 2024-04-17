@@ -1,5 +1,5 @@
 # Calligraphy Robot
-This is the repo for the calligraphy robot, which implements this [paper](https://arxiv.org/abs/2003.01565), IROS 2020.
+This is the repo for the calligraphy robot, which implements the paper [Robot calligraphy using pseudospectral optimal control in conjunction with a novel dynamic brush model](https://arxiv.org/abs/2003.01565), published at IROS 2020.
 
 This whole program is mostly written by C++, with a few Python code to process dataset images.
 
@@ -54,3 +54,15 @@ We provide many ways to visualize the final optimization results. `showmatrix.py
 
 ## Brush identification
 We write a simple script `new_fit_vb_parameters.py` to do the linear regression.
+
+# Citation
+```
+@article{Wang2020RobotCalligraphy,
+  title={Robot Calligraphy using Pseudospectral Optimal Control in Conjunction with a Novel Dynamic Brush Model},
+  author={Sen Wang and Jiaqi Chen and Xuanliang Deng and Seth A. Hutchinson and Frank Dellaert},
+  journal={2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2020},
+  pages={6696-6703},
+  url={https://api.semanticscholar.org/CorpusID:208157960}
+}
+```
